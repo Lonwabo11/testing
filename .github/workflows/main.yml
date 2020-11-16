@@ -14,5 +14,7 @@ jobs:
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        with:
+          enable_jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
