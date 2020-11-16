@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
-        uses: peaceiris/actions-gh-pages@v3
+        uses: actions/checkout@v1
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        with:
+          enable_jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
