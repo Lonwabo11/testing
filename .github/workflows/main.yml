@@ -22,7 +22,7 @@ jobs:
           python3 -m pip install --upgrade pip
 
       - name: Install dependencies
-        run: python3 -m pip3 install mkdocs-material
+        run: python3 -m pip install mkdocs-material
 
       - run: mkdocs build
 
